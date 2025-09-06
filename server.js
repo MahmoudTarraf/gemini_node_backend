@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const multer = require("multer");
 const fs = require("fs");
 const path = require("path");
@@ -7,6 +8,8 @@ require("dotenv").config();
 
 const app = express();
 const upload = multer({ dest: "uploads/" });
+app.use(cors()); // enable CORS for all routes
+
 app.use(express.json());
 
 const API_KEY = process.env.API_KEY;
