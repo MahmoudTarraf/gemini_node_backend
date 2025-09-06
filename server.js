@@ -104,7 +104,7 @@ app.post("/compare-texts", async (req, res) => {
 
 // --------- Start Server ---------
 const PORT = process.env.PORT || 3001;
-const HOST = 'localhost';
+const HOST = '0.0.0.0';
 app.listen(PORT,HOST, () => {
   console.log(`🚀 Server running on http://${HOST}:${PORT}`);
 });
